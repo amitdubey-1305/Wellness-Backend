@@ -114,3 +114,11 @@ Authentication: Bearer Toekn
 - If the item is not found for any `GET`/`POST` the API should return a 404 error.
 
 **Tip:** You can use tools like Postman to try these API endpoints easily. Just replace `/routes` with your actual route names if they are different.
+
+## Deployment
+
+This backend is configured for deployment on [Vercel](https://vercel.com).
+1. The project uses `@vercel/node` to run the Express API as a serverless function.
+2. The deployment configuration is maintained in `vercel.json`, which sets `index.js` as the application's entry point.
+3. Simply connect this repository to your Vercel project and it will build automatically.
+4. Ensure your Environment Variables (like `MONGO_DB_URL` and `JWT_SECRET`) are configured in your Vercel project settings.
